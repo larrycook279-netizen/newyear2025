@@ -1,0 +1,39 @@
+.about {
+  @include section-padding;
+
+  &__content {
+    @include container;
+    display: grid;
+    gap: 3rem;
+
+    @media (min-width: $breakpoint-lg) {
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      align-items: center;
+    }
+  }
+
+  &__media {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 12% 10%;
+      border: 2px dashed rgba(228, 196, 138, 0.6);
+      border-radius: 26px;
+      z-index: -1;
+    }
+
+    .media {
+      border-radius: 26px;
+    }
+  }
+
+  &__text {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 2.5rem;
+    border-radius: 26px;
+    border: 1px solid rgba(228, 196, 138, 0.45);
+    box-shadow: $shadow-soft;
+  }
+}

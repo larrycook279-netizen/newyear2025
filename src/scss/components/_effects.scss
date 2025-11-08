@@ -1,0 +1,77 @@
+.snowfall {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.snowfall__flake {
+  position: absolute;
+  top: -10vh;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  opacity: 0.85;
+  animation: snowfall linear infinite;
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(-30px, 105vh, 0) scale(0.8);
+    opacity: 0;
+  }
+}
+
+.candle {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 28px;
+    background: radial-gradient(circle, rgba(228, 196, 138, 0.95), rgba(228, 196, 138, 0));
+    animation: candle-flicker 2.5s ease-in-out infinite;
+    filter: blur(0.5px);
+  }
+}
+
+@keyframes candle-flicker {
+  0%,
+  100% {
+    opacity: 0.8;
+    transform: translateX(-50%) scale(1);
+  }
+  40% {
+    opacity: 1;
+    transform: translateX(-48%) scale(1.1);
+  }
+  70% {
+    opacity: 0.7;
+    transform: translateX(-52%) scale(0.95);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

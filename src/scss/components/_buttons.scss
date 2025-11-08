@@ -1,0 +1,44 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1.8rem;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  background: linear-gradient(135deg, $color-crimson, darken($color-crimson, 8%));
+  color: $color-snow;
+  box-shadow: $shadow-glow;
+  transition: $transition-base;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(135deg, lighten($color-crimson, 3%), $color-crimson);
+    transform: translateY(-2px);
+    box-shadow: 0 30px 60px rgba(179, 0, 0, 0.35);
+  }
+
+  &--outline {
+    background: transparent;
+    color: $color-crimson;
+    border: 1px solid rgba(179, 0, 0, 0.3);
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      background: rgba(179, 0, 0, 0.08);
+      box-shadow: $shadow-glow;
+    }
+  }
+}
+
+.button__icon {
+  font-size: 1.3rem;
+  transition: transform 0.4s ease;
+}
+
+.button:hover .button__icon {
+  transform: translateX(4px);
+}

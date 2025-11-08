@@ -1,0 +1,16 @@
+.features {
+  @include section-padding;
+  background: linear-gradient(180deg, rgba(249, 244, 238, 0.7), rgba(228, 196, 138, 0.35));
+
+  &__content {
+    @include container;
+  }
+
+  &__grid {
+    @extend .grid--three;
+  }
+
+  .card {
+    min-height: 100%;
+  }
+}

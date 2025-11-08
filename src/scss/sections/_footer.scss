@@ -1,0 +1,37 @@
+.footer {
+  background: rgba(15, 23, 42, 1);
+  color: rgba(249, 244, 238, 0.85);
+  padding: 2rem 0;
+
+  &__content {
+    @include container;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+
+    @media (min-width: $breakpoint-md) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    a {
+      color: rgba(249, 244, 238, 0.7);
+      font-size: 0.95rem;
+      transition: $transition-base;
+
+      &:hover {
+        color: $color-gold;
+      }
+    }
+  }
+}

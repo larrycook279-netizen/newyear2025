@@ -1,0 +1,15 @@
+.pricing {
+  @include section-padding;
+
+  &__content {
+    @include container;
+    display: grid;
+    gap: 3rem;
+  }
+
+  &__note {
+    text-align: center;
+    font-family: $font-heading;
+    color: $color-crimson;
+  }
+}

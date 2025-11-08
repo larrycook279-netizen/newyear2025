@@ -1,0 +1,59 @@
+@use 'base/variables' as *;
+@use 'base/mixins' as *;
+@use 'base/reset';
+@use 'base/typography';
+@use 'components/layout';
+@use 'components/buttons';
+@use 'components/cards';
+@use 'components/media';
+@use 'components/table';
+@use 'components/form';
+@use 'components/effects';
+@use 'sections/header';
+@use 'sections/hero';
+@use 'sections/about';
+@use 'sections/features';
+@use 'sections/emotion';
+@use 'sections/pricing';
+@use 'sections/process';
+@use 'sections/samples';
+@use 'sections/testimonials';
+@use 'sections/cta';
+@use 'sections/footer';
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(228, 196, 138, 0.12), transparent 55%),
+    radial-gradient(circle at 80% 10%, rgba(179, 0, 0, 0.12), transparent 50%),
+    radial-gradient(circle at 50% 80%, rgba(30, 41, 59, 0.08), transparent 60%);
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.anchor-offset {
+  scroll-margin-top: calc($header-height + 24px);
+}
+
+.highlight {
+  background: linear-gradient(120deg, rgba(228, 196, 138, 0.5), rgba(228, 196, 138, 0));
+  padding: 0 0.4rem;
+  border-radius: 6px;
+}
+
+blockquote {
+  border-left: 4px solid rgba(228, 196, 138, 0.6);
+  padding-left: 1.5rem;
+  font-family: $font-heading;
+  color: rgba(15, 23, 42, 0.7);
+  font-size: 1.05rem;
+}
+
+@media (max-width: $breakpoint-sm) {
+  body::before {
+    opacity: 0.22;
+  }
+}

@@ -1,0 +1,37 @@
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: $shadow-soft;
+  background: rgba(255, 255, 255, 0.92);
+
+  th,
+  td {
+    padding: 1.4rem 1.8rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(228, 196, 138, 0.35);
+  }
+
+  th {
+    font-family: $font-heading;
+    font-size: 1.1rem;
+    color: $color-deep-blue;
+    background: linear-gradient(135deg, rgba(179, 0, 0, 0.9), rgba(228, 196, 138, 0.65));
+    color: $color-snow;
+  }
+
+  td {
+    color: rgba(15, 23, 42, 0.75);
+    background: rgba(249, 244, 238, 0.7);
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+}
+
+.pricing-table__label {
+  font-weight: 600;
+  color: $color-crimson;
+}

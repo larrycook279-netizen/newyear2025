@@ -1,0 +1,17 @@
+{
+  "name": "newyear2025",
+  "version": "1.0.0",
+  "description": "Лендинг \"Письмо от настоящего Деда Мороза\"",
+  "scripts": {
+    "preview": "node scripts/preview.mjs"
+  },
+  "keywords": [
+    "landing",
+    "christmas",
+    "new-year",
+    "ded-moroz"
+  ],
+  "author": "Codex Studio",
+  "license": "MIT",
+  "type": "module"
+}

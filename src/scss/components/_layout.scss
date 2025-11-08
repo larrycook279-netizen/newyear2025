@@ -1,0 +1,69 @@
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 2.5rem;
+
+  &__eyebrow {
+    font-size: 0.9rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(228, 196, 138, 0.75);
+    display: block;
+    margin-bottom: 0.85rem;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+  }
+
+  &__subtitle {
+    max-width: 640px;
+    margin: 0.5rem auto 0;
+    color: rgba(15, 23, 42, 0.75);
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.grid--two {
+  @extend .grid;
+
+  @media (min-width: $breakpoint-md) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.grid--three {
+  @extend .grid;
+
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  background: rgba(228, 196, 138, 0.2);
+  color: $color-crimson;
+  font-weight: 600;
+}

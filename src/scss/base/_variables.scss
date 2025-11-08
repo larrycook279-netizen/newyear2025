@@ -1,0 +1,24 @@
+$color-crimson: #b30000;
+$color-gold: #e4c48a;
+$color-milk: #f9f4ee;
+$color-deep-blue: #1e293b;
+$color-snow: #ffffff;
+$color-ink: #0f172a;
+$color-text: #1b1b1b;
+$color-muted: rgba(30, 41, 59, 0.65);
+$color-overlay: rgba(15, 23, 42, 0.55);
+
+$font-heading: 'Playfair Display', 'Cormorant Garamond', serif;
+$font-body: 'Inter', 'Noto Serif', serif;
+
+$transition-base: all 0.4s ease;
+$shadow-soft: 0 20px 40px rgba(15, 23, 42, 0.25);
+$shadow-glow: 0 0 30px rgba(228, 196, 138, 0.35);
+
+$max-width-container: 1140px;
+$header-height: 72px;
+
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;

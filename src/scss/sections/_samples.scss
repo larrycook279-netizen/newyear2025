@@ -1,0 +1,43 @@
+.samples {
+  @include section-padding;
+
+  &__content {
+    @include container;
+    display: grid;
+    gap: 3rem;
+  }
+
+  &__gallery {
+    display: grid;
+    gap: 1.5rem;
+
+    @media (min-width: $breakpoint-md) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  &__item {
+    position: relative;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: $shadow-soft;
+
+    .media {
+      transform-origin: center;
+    }
+
+    &:hover .media {
+      transform: scale(1.05);
+    }
+  }
+
+  &__quote {
+    font-family: $font-heading;
+    font-size: 1.15rem;
+    color: $color-deep-blue;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 2rem;
+    border-radius: 18px;
+    border: 1px solid rgba(228, 196, 138, 0.35);
+  }
+}

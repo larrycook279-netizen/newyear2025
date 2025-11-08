@@ -1,0 +1,74 @@
+.form {
+  @include subtle-card;
+  padding: 2.5rem;
+  display: grid;
+  gap: 1.5rem;
+  background: rgba(249, 244, 238, 0.95);
+
+  &__row {
+    display: grid;
+    gap: 1.2rem;
+
+    @media (min-width: $breakpoint-md) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  &__group {
+    display: grid;
+    gap: 0.6rem;
+  }
+
+  &__label {
+    font-weight: 600;
+    color: $color-deep-blue;
+  }
+
+  &__input,
+  &__textarea,
+  &__select {
+    border: 1px solid rgba(30, 41, 59, 0.15);
+    border-radius: 14px;
+    padding: 0.85rem 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    transition: $transition-base;
+
+    &:focus {
+      outline: none;
+      border-color: rgba(179, 0, 0, 0.45);
+      box-shadow: 0 0 0 4px rgba(179, 0, 0, 0.12);
+    }
+  }
+
+  &__textarea {
+    resize: vertical;
+    min-height: 140px;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @media (min-width: $breakpoint-md) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__note {
+    font-size: 0.9rem;
+    color: rgba(15, 23, 42, 0.7);
+  }
+}
+
+.input-error {
+  border-color: rgba(179, 0, 0, 0.6) !important;
+}
+
+.form__message {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: $color-crimson;
+}

@@ -1,0 +1,51 @@
+@mixin container {
+  width: min(100% - 3rem, $max-width-container);
+  margin-inline: auto;
+}
+
+@mixin section-padding($top: 6rem, $bottom: 6rem) {
+  padding-block: $top $bottom;
+
+  @media (max-width: $breakpoint-md) {
+    padding-block: 4rem;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    padding-block: 3.5rem;
+  }
+}
+
+@mixin heading-style($size-desktop, $size-mobile) {
+  font-family: $font-heading;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  font-size: $size-desktop;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: $size-mobile;
+  }
+}
+
+@mixin subtle-card {
+  background: rgba(249, 244, 238, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(228, 196, 138, 0.4);
+  box-shadow: $shadow-soft;
+  border-radius: 24px;
+}
+
+@mixin frost-overlay {
+  position: relative;
+  isolation: isolate;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(255, 255, 255, 0.35), transparent 60%),
+      radial-gradient(circle at bottom, rgba(180, 0, 0, 0.15), transparent 55%);
+    z-index: -1;
+    opacity: 0.9;
+  }
+}

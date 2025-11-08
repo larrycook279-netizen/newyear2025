@@ -56,7 +56,8 @@ h1 {
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  font-size: 3.4rem;
+  font-size: 3.3rem;
+  margin-bottom: 20px;
 }
 @media (max-width: 768px) {
   h1 {
@@ -68,10 +69,12 @@ h2 {
   line-height: 1.2;
   letter-spacing: 0.02em;
   font-size: 2.8rem;
+      margin-bottom: 20px;
 }
 @media (max-width: 768px) {
   h2 {
     font-size: 2.1rem;
+
   }
 }
 h3 {
@@ -278,7 +281,7 @@ main {
   box-shadow: 0 30px 60px rgba(15, 23, 42, 0.18);
 }
 .media--about::after {
-  background: linear-gradient(120deg, rgba(179, 0, 0, 0.08), transparent 65%), repeating-linear-gradient(-45deg, rgba(228, 196, 138, 0.08) 0 18px, transparent 18px 36px);
+ 
 }
 .media--sample {
   border-radius: 22px;
@@ -621,8 +624,6 @@ main {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.35), transparent 60%),
-    radial-gradient(circle at bottom, rgba(180, 0, 0, 0.15), transparent 55%);
   z-index: -1;
   opacity: 0.9;
 }
@@ -736,6 +737,11 @@ main {
     linear-gradient(140deg, rgba(30, 41, 59, 0.92), rgba(30, 41, 59, 0.65));
   color: #ffffff;
 }
+
+.emotion h2 {
+  color:#ffffff;
+}
+
 @media (max-width: 768px) {
   .emotion {
     padding-block: 4rem;
@@ -752,9 +758,12 @@ main {
   display: grid;
   gap: 3rem;
 }
+.emotion__content blockquote {
+  color:#fff;
+}
 @media (min-width: 992px) {
   .emotion__content {
-    grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+    grid-template-columns: minmax(0, 0.75fr) minmax(0, 0.55fr);
     align-items: center;
   }
 }
@@ -794,6 +803,11 @@ main {
 .process {
   padding-block: 6rem 6rem;
   background: linear-gradient(180deg, rgba(30, 41, 59, 0.92), rgba(30, 41, 59, 0.65));
+  color: #ffffff;
+}
+
+.process__content .section-heading__title{
+  
   color: #ffffff;
 }
 @media (max-width: 768px) {

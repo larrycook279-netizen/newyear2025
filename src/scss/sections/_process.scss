@@ -14,7 +14,15 @@
     gap: 1.5rem;
 
     @media (min-width: $breakpoint-lg) {
-      grid-template-columns: repeat(5, minmax(0, 1fr));
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+
+      > .process__step:nth-child(-n + 3) {
+        grid-column: span 2;
+      }
+
+      > .process__step:nth-child(n + 4) {
+        grid-column: span 3;
+      }
     }
   }
 

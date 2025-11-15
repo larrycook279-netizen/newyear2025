@@ -745,7 +745,7 @@ main {
 @media (max-width: 768px) {
   .emotion {
     padding-block: 4rem;
-  }
+  } 
 }
 @media (max-width: 576px) {
   .emotion {
@@ -806,54 +806,84 @@ main {
   color: #ffffff;
 }
 
-.process__content .section-heading__title{
-  
+.process__content .section-heading__title {
   color: #ffffff;
 }
+
 @media (max-width: 768px) {
   .process {
     padding-block: 4rem;
   }
 }
+
 @media (max-width: 576px) {
   .process {
     padding-block: 3.5rem;
   }
 }
+
 .process__content {
   width: min(100% - 3rem, 1140px);
   margin-inline: auto;
   display: grid;
   gap: 3rem;
 }
+
 .process__steps {
   display: grid;
   gap: 1.5rem;
 }
-@media (min-width: 992px) {
+
+/* Мобильный — по одной */
+@media (max-width: 767px) {
   .process__steps {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
-
-  .process__steps > .process__step:nth-child(-n + 3) {
-    grid-column: span 2;
-  }
-
-  .process__steps > .process__step:nth-child(n + 4) {
-    grid-column: span 3;
+    grid-template-columns: 1fr;
   }
 }
+
+/* Планшет — по две */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .process__steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Десктоп — первая строка: 3, вторая строка: 2 */
+@media (min-width: 1200px) {
+  .process__steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* С 4-й карточки начинается вторая строка */
+  .process__step:nth-child(n+4) {
+    grid-column: span 1;
+  }
+
+  /* Размещаем 4-ю и 5-ю карточку в две колонки */
+  .process__step:nth-child(4) {
+    grid-column: 1 / 2;
+  }
+
+  .process__step:nth-child(5) {
+    grid-column: span 2;
+    
+  }
+
+  /* Третья колонка пустая — визуально получается 3 + 2 */
+}
+
 .process__step {
   background: rgba(249, 244, 238, 0.85);
   backdrop-filter: blur(16px);
   border: 1px solid rgba(228, 196, 138, 0.4);
-  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.25);
+  box-shadow: 0 20px 40px rgba(15, 23,42, 0.25);
   border-radius: 24px;
   background: rgba(15, 23, 42, 0.4);
   padding: 2rem;
   text-align: center;
   border: 1px solid rgba(228, 196, 138, 0.35);
 }
+
 .process__step-number {
   display: inline-flex;
   align-items: center;
@@ -866,16 +896,19 @@ main {
   font-weight: 700;
   margin-bottom: 1.2rem;
 }
+
 .process__step-title {
   font-family: "Playfair Display", "Cormorant Garamond", serif;
   font-size: 1.1rem;
   color: #ffffff;
   margin-bottom: 0.6rem;
 }
+
 .process__step-text {
   color: rgba(249, 244, 238, 0.8);
   font-size: 0.95rem;
 }
+
 .samples {
   padding-block: 6rem 6rem;
 }
